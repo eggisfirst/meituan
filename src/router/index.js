@@ -7,8 +7,13 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'index',
-      component: resolve => require(['@/pages/index'], resolve)
+      name: 'defaultPage',
+      component: resolve => require(['@/layout/default'], resolve)
+    },
+    {
+      path: '/blank',
+      name: 'blankPage',
+      component: resolve => require(['@/layout/blank'], resolve)
     }
   ]
 })

@@ -80,6 +80,8 @@ button {
   background: none; }
 
 input {
+  -webkit-appearance:none;
+  border-radius:0;
   border: none;
   background: none; }
  input::-webkit-outer-spin-button,
@@ -94,8 +96,5 @@ textarea {
   background: none;
   overflow: hidden; }
 
-a {
-  color: #020202; }
-  a:hover {
-    text-decoration: none; }
+
 </style>
