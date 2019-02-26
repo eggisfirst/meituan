@@ -11,7 +11,7 @@ const actions = {
 }
 
 const getters = {
-
+  
 }
 
 export default {
