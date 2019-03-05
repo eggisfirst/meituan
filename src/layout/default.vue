@@ -1,42 +1,34 @@
 <template>
   <div class="layout-default">
     <el-container>
-      <el-header>
+      <el-header height=''>
         <my-header />
       </el-header>
-      <el-main>Main</el-main>
-      <el-footer>Footer</el-footer>
+      <el-main>
+        <router-view></router-view>
+      </el-main>
+      <el-footer height=''>
+        <my-footer />
+      </el-footer>
     </el-container>
-    <button @click="add">添加</button>
   </div>
 </template>
 
 <script>
 import {mapState, mapGetters, mapMutations, mapActions} from 'vuex'
 import MyHeader from '@/components/header/index.vue'
+import MyFooter from '@/components/footer/index.vue'
 export default {
-  components: { MyHeader },
+  components: { MyHeader, MyFooter },
   data() {
     return {
 
     }
   },
-  computed: {
-    ...mapState(['list']),
-  //  ...mapGetters(['newList'])
-    // ...mapGetters({
-    //   list: 'newList'
-    // })
+  created() {
   },
   methods: {
-    // ...mapMutations(['changList']),
-    ...mapActions(['changList']),
-    add() {
-      this.changList({name: 'xiaowei', number: 1})
-      // this.$store.dispatch('changList', {name: 'xiaowei', number: 1})
-      // this.$store.commit('changList', {name: 'xiaowei', number: 1})
-      console.log(this.list)
-    }
+
   }
 }
 </script>

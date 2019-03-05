@@ -1,22 +1,18 @@
-const state = {
-  home: []
-}
-
-const mutations = {
-  setHome: (state, arr) => state.home = arr
-}
-
-const actions = {
-
-}
-
-const getters = {
-  
-}
-
 export default {
-  state,
-  getters,
-  actions,
-  mutations
+  state: {
+    list: [1, 2, 3]
+  },
+  mutations: {
+    changeList (state, {number}) {
+      state.list.push(number)
+    }
+  },
+  getters: {
+    setList (state) {
+      return state.list + 2
+    }
+  },
+  actions: {
+
+  }
 }

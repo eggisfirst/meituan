@@ -8,28 +8,28 @@ export default new Vuex.Store({
     list: []
   },
   getters: {
-    newList(state) {
+    newList (state) {
       return state.list.map((item, index) => {
-        if(index == 0) {
+        if (index === 0) {
           return item + 'first'
-        }else if(index < 3) {
+        } else if (index < 3) {
           return item + '+++'
-        }else {
-          return item+'**'
+        } else {
+          return item + '**'
         }
       })
     }
   },
   mutations: {
-    changList(state, {name ,number}) {
-      state.list.push(name+number)
+    changList (state, {name, number}) {
+      state.list.push(name + number)
     }
   },
   actions: {
-    changList(ctx, {name, number}) {
+    changList (ctx, {name, number}) {
       setTimeout(() => {
         ctx.commit('changList', {name, number})
-      }, 2000);
+      }, 2000)
     }
   },
   modules: {

@@ -79,6 +79,13 @@ button {
   border: none;
   background: none; }
 
+button,
+input,
+textarea {
+  border: none;
+  background: none;
+  outline: none;
+}
 input {
   -webkit-appearance:none;
   border-radius:0;

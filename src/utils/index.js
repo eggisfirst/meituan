@@ -1,13 +1,13 @@
 import { Request } from './request'
 
 class IndexModel extends Request {
-  //模拟获取抽奖类型
-  getAwardList() {
+  // 模拟获取抽奖类型
+  getAwardList () {
     return this.getData({
-      url: '/good/seller',
+      url: '/good/seller'
     })
   }
-  //抽奖接口
+  // 抽奖接口
   // getDrawLottery(prizeId, drawNum) {
   //   return this.getData({
   //     url: '/lotteryWinner/drawLottery',
@@ -17,7 +17,6 @@ class IndexModel extends Request {
   //     }
   //   })
   // }
-
 }
 
 export { IndexModel }
