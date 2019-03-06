@@ -2,9 +2,12 @@ import { Request } from './request'
 
 class IndexModel extends Request {
   // 模拟获取抽奖类型
-  getAwardList () {
+  test () {
     return this.getData({
-      url: '/good/seller'
+      url:'/api/meituan/header/searchHotWords.json',
+      params: {
+        appkey: 'qq578850593_1551837415007'
+      }
     })
   }
   // 抽奖接口
